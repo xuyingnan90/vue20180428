@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <div v-html="hello" v-bind:class="{'header':header,'class1':class1,'class2':class2}"></div>
+       <router-view></router-view>
+        <div v-bind:id="footer" v-bind:class="footerbar">
+            <router-link to="/bookstore">
+                <div>
+                    <p>
+                        <i class="fa fa-shopping-cart"></i>
+                    </p>
+                    <p>书城</p>
+                </div>
+            </router-link>
+            <router-link to="/bookshelf">
+                <div>
+                    <p>
+                        <i class="fa fa-bookmark"></i>
+                    </p>
+                    <p>书架</p>
+                </div>
+            </router-link>
+            <router-link to="/bookstore">
+                <div>
+                    <p>
+                        <i class="fa fa-globe"></i>
+                    </p>
+                    <p>发现</p>
+                </div>
+            </router-link>
+            <router-link to="/bookstore">
+                <div>
+                    <p>
+                        <i class="fa fa-user"></i>
+                    </p>
+                    <p>我的</p>
+                </div>
+            </router-link>
+
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/vue-router.js"></script>
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/project.index.js"></script>
+
+</body>
+
+</html>
